@@ -30,7 +30,7 @@ esp32:
 
 Now the board should connect to your WiFi, and further firmware updates and log readings work OTA.
 
-[Full working code](example/esp32c3_lpkit_basic_conf.yaml)
+[Full working code](examples/esp32c3_lpkit_basic_conf.yaml)
 
 ## Configuring sensors with I2C on μŠup connector
 The board features a μŠup conector, which makes live of solder-noob so much easier :-) There is plenty sensors and other stuff using the connector.
