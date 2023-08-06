@@ -30,6 +30,8 @@ esp32:
 
 Now the board should connect to your WiFi, and further firmware updates and log readings work OTA.
 
+[Full working code](example/esp32c3_lpkit_basic_conf.yaml)
+
 ## Configuring sensors with I2C on μŠup connector
 The board features a μŠup conector, which makes live of solder-noob so much easier :-) There is plenty sensors and other stuff using the connector.
 
@@ -63,6 +65,8 @@ sensor:
 ```
 (sensor details at [ESPhome](https://esphome.io/components/sensor/bme280.html))
 
+[Full working code](examples/esp32c3_lpkit_bme280.yaml)
+
 Or another example with [SCD41](https://github.com/LaskaKit/SCD41-CO2-Sensor)
 ```
 sensor:
@@ -77,5 +81,7 @@ sensor:
       name: "Humidity"
 ```
 (sensor details at [ESPhome](https://esphome.io/components/sensor/scd4x.html))
+
+[Full working code](examples/esp32c3_lpkit_scd41.yaml)
 
 With some sensors, a warning is triggered about the sensor taking too much time to operate. Adding `frequency: 400kHz` to `i2c` section resolves the problem for some of the sensors (in my case, it did for SCD41, but didn't BME280)
