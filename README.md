@@ -35,7 +35,7 @@ Now the board should connect to your WiFi, and further firmware updates and log 
 ## Configuring sensors with I2C on μŠup connector
 The board features a μŠup conector, which makes live of solder-noob so much easier :-) There is plenty sensors and other stuff using the connector.
 
-> ### Note on the conecting cables
+> ### Note on the connecting μŠup cables
 > Make sure, you use the correct one :-) The μŠup system uses JST-SH-4 1.0mm 4pin connectors, but make sure that the cable is "crossed". E.g. if you orient both connectors same way, the order of wire colors is the same too.
 
 The μŠup connector is wired to the GPIO8, GPIO10, 3.3V and GND. Following configuration enables I2C on these pins:
@@ -48,7 +48,7 @@ i2c:
 ```
 The `scan` parameter is important, when it is set to `True`, the board won't boot.
 
-And to connect for example [BME280](https://github.com/LaskaKit/BMP280-Sensor), add this:
+And to connect for example [BME280](https://github.com/LaskaKit/BMP280-Sensor) (on LaskaKit board), add this:
 ```
 sensor:
   - platform: bme280
@@ -67,7 +67,7 @@ sensor:
 
 [Full working code](examples/esp32c3_lpkit_bme280.yaml)
 
-Or another example with [SCD41](https://github.com/LaskaKit/SCD41-CO2-Sensor)
+Or another example with [SCD41](https://github.com/LaskaKit/SCD41-CO2-Sensor) (on LaskaKit board)
 ```
 sensor:
   - platform: scd4x
